@@ -4,12 +4,13 @@
     <id>webpi</id>
     <version>5.0</version>
     <title>WebPI (Platform Installer)</title>
+    <owners>jgaikwad</owners>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoft.com/web/downloads/platform.aspx</projectUrl>
     <copyright>2020 Microsoft</copyright>
     <licenseUrl>https://go.microsoft.com/fwlink/?LinkID=145508</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/n0ki/chocolateypackages/tree/master/webpi</projectSourceUrl>
+    <packageSourceUrl>https://github.com/n0ki/chocolateypackages/tree/master/webpi</packageSourceUrl>
     <tags>webpi microsoft installer</tags>
     <summary>webpi 5.0 installer</summary>
     <description>Working version of webpi package with updated URLs from Microsoft. The Microsoft Web Platform Installer (Web PI) is a free tool that makes getting the latest components of the Microsoft Web Platform, including Internet Information Services (IIS), SQL Server Express, .NET Framework and Visual Web Developer easy.
