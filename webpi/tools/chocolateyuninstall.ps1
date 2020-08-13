@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'webpi*'  #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-  fileType      = 'MSI' #only one of these: MSI or EXE (ignore MSU for now)
+  softwareName  = 'webpi*'  
+  fileType      = 'MSI' 
   silentArgs    = "/qn /norestart"
-  validExitCodes= @(0, 3010, 1605, 1614, 1641) # https://msdn.microsoft.com/en-us/library/aa376931(v=vs.85).aspx
+  validExitCodes= @(0, 3010, 1605, 1614, 1641) 
 }
 
 $uninstalled = $false
@@ -13,7 +13,7 @@ $uninstalled = $false
 
 if ($key.Count -eq 1) {
   $key | % { 
-    $packageArgs['file'] = "$($_.UninstallString)" #NOTE: You may need to split this if it contains spaces, see below
+    $packageArgs['file'] = "$($_.UninstallString)" 
     
     if ($packageArgs['fileType'] -eq 'MSI') {
       $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
